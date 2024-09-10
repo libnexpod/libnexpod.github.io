@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/style.css">
+        <title>libnexpod</title>
+    </head>
+    <body>
+        <h1>About</h1>
+        <p>libnexpod is a library for Linux to easily create pet containers, be it for system administration, development or something else. It's built on top of proven technologies like <a href="https://podman.io">podman</a> and <a href="https://opencontainers.org">OCI</a>.</p>
+        <p>libnexpod environments have tight integration with the host system, including the user's home directory, sockets, networking, devices and other crucial system components.</p>
+        <h1>Documentation</h1>
+        <ol>
+            <li><a href="/image-documentation.html">Image Documentation</a></li>
+            <li><a href="/zig-library-documentation/index.html">Zig Library Documentation</a></li>
+        </ol>
+        <h1>Why libnexpod when distrobox and toolbx already exist</h1>
+        <p><a href="https://distrobox.it">distrobox</a> and <a href="https://containertoolbx.org">toolbx</a> are CLI tools with a similar goal as libnexpod, but there are a few differences. libnexpod is designed as a library first tool to make it more commonly used by other applications besides users. That includes that libnexpod tries to namespace the individual containers from each other to make it less likely that other projects step on each others toes.</p>
+        <p>Compared to toolbx (which is a heavy inspiration of this project) this project has the goal of a wider feature set without compomising on its stability and reliability.</p>
+        <p>Compated to distrobox this project has the goal of a higher degree of reliability and performance.</p>
+    </body>
+</html>

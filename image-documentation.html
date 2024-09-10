@@ -1,0 +1,24 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/style.css">
+        <title>libnexpod Image Requirements</title>
+    </head>
+    <body>
+        <h1>About</h1>
+        This document describes the requirements a libnexpod image is supposed to have.
+        <h1>Filesystem</h1>
+        The Filesystem is expected to roughly follow the Linux Filesystem Hierarchy Standard.<br>
+        Additionally the directory <code>/usr/libexec/libnexpod/</code> must exist which should also be the place in which the libnexpod-host-shim should be installed.<br>
+        Since users may want to use podman or libnexpod inside of a container, a symlink from <code>/usr/bin/podman</code> to the host-shim must exist and the package manager must know about this. This includes that the shim package has podman as a conflict and but also that it provides podman's capabilities, so that packages depending on podman can work without modification, as if they are executed on the host.
+        <h1>Installed Utilities</h1>
+        A minimal set of Posix utilities should exist by default, but as a must have there are:
+        <ul>
+            <li><code>useradd</code></li>
+            <li><code>usermod</code></li>
+            <li><code>groupadd</code></li>
+            <li><code>sudo</code></li>
+            <li><code>sh</code> installed at <code>/bin/sh</code> or a valid symlink</li>
+        </ul>
+    </body>
+</html>
